@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1RvmbaeP0og4VB053fw4G9fvIbjNkLb1dzzdFV0oxCc=",
+  "Source": "spayserver",
+  "BasePath": "_content/spayserver",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
