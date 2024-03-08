@@ -1,4 +1,5 @@
-﻿using spayserver.Data.Models;
+﻿using spayserver.Data.DTOs;
+using spayserver.Data.Models;
 
 namespace spayserver.Data.Repositories.GroupRepo
 {
@@ -7,5 +8,7 @@ namespace spayserver.Data.Repositories.GroupRepo
         Task<IEnumerable<Group>> GetGroupsAsync();
         Task<Group> GetGroupByIdAsync(int id);
         Task<IEnumerable<Group>> GetGroupByNameAsync(string groupName);
+
+        Task<GroupDTO> CreateGroupAsync(AddGroupDTO groupDTO);
     }
 }

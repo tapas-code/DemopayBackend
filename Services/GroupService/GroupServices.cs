@@ -42,5 +42,12 @@ namespace spayserver.Services.GroupService
                 GroupName = group.GroupName
             };
         }
+
+
+
+        public async Task<GroupDTO> CreateGroupAsync(AddGroupDTO groupDTO)
+        {
+            return await _groupRepository.CreateGroupAsync(groupDTO);
+        }
     }
 }

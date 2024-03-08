@@ -4501,19 +4501,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TapasKumar\\.nuget\\packages\\": {}
+    "C:\\Users\\KishlayKumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\spayserver.csproj",
+      "projectUniqueName": "C:\\Users\\KishlayKumar\\Source\\Repos\\DemopayBackend\\spayserver.csproj",
       "projectName": "spayserver",
-      "projectPath": "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\spayserver.csproj",
-      "packagesPath": "C:\\Users\\TapasKumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\obj\\",
+      "projectPath": "C:\\Users\\KishlayKumar\\Source\\Repos\\DemopayBackend\\spayserver.csproj",
+      "packagesPath": "C:\\Users\\KishlayKumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KishlayKumar\\Source\\Repos\\DemopayBackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TapasKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KishlayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4577,7 +4577,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

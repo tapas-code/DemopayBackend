@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using spayserver.Data.DTOs;
+using spayserver.Data.Models;
 using spayserver.Services.GroupService;
 
 namespace spayserver.Controllers
@@ -35,8 +36,27 @@ namespace spayserver.Controllers
         public async Task<ActionResult<IEnumerable<GroupDTO>>> GetGroupByNameAsync(string groupName)
         {
             var groups = await _groupServices.GetGroupByNameAsync(groupName);
-            if (groups == null) return NotFound();  
+            if (groups == null) return NotFound();
             return Ok(groups);
         }
+
+        [HttpPost("create")]
+        public async Task<ActionResult<GroupDTO>> CreateGroup([FromBody] AddGroupDTO detail)
+        {
+            try
+            {
+                var group = await _groupServices.CreateGroupAsync(detail);
+                return Ok(new GroupDTO
+                {
+                    GroupId = group.GroupId,
+                    GroupName = group.GroupName
+                });
+            }
+            catch
+            {
+                return BadRequest("Invalid Consumer details.");
+            }
+        }
     }
+
 }

@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using spayserver.Data.Contexts;
 using spayserver.Data.Repositories.GroupRepo;
 using spayserver.Data.Repositories.UserRepo;
@@ -12,7 +13,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<SpaydbContext>();
+builder.Services.AddDbContext<SpaydbContext>(options =>
+{
+options.UseSqlServer(builder.Configuration.GetConnectionString("default"));
+});
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IGroupServices, GroupServices>();
