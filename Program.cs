@@ -1,6 +1,8 @@
 using spayserver.Data.Contexts;
+using spayserver.Data.Repositories.GroupRepo;
 using spayserver.Data.Repositories.UserRepo;
-using spayserver.Services;
+using spayserver.Services.GroupService;
+using spayserver.Services.UserService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SpaydbContext>();
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IGroupServices, GroupServices>();
+builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 
 var app = builder.Build();
 

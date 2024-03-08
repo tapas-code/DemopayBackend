@@ -18,9 +18,17 @@ namespace spayserver.Data.Repositories.UserRepo
             return await _context.Users.ToListAsync();
         }
 
-        //public async Task<User> GetUserByIdAsync(int id)
-        //{
-        //    var user = await _context.Users.FirstOrDefaultAsync(u => u.userId == id);
-        //}
+        public async Task<User> GetUserByIdAsync(int id)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.UserId == id);
+        }
+
+        public async Task<IEnumerable<User>> GetUserByNameAsync(string searchTerm)
+        {
+            return await _context.Users.Where(u => 
+                                                u.Username.Contains(searchTerm)||
+                                                u.FirstName.Contains(searchTerm)||
+                                                u.LastName.Contains(searchTerm)).ToListAsync();
+        }
     }
 }

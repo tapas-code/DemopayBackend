@@ -134,3 +134,4 @@ C:\Users\TapasKumar\mySaves\PROJECTS\SPay\server\spayserver\obj\Debug\net8.0\ref
 C:\Users\TapasKumar\mySaves\PROJECTS\SPay\server\spayserver\obj\Debug\net8.0\spayserver.pdb
 C:\Users\TapasKumar\mySaves\PROJECTS\SPay\server\spayserver\obj\Debug\net8.0\spayserver.genruntimeconfig.cache
 C:\Users\TapasKumar\mySaves\PROJECTS\SPay\server\spayserver\obj\Debug\net8.0\ref\spayserver.dll
+C:\Users\TapasKumar\mySaves\PROJECTS\SPay\server\spayserver\obj\Debug\net8.0\spayserver.sourcelink.json
