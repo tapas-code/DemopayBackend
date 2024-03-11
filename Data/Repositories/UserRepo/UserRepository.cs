@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using spayserver.Data.Contexts;
 using spayserver.Data.DTOs;
 using spayserver.Data.Models;
+using System.Collections.Concurrent;
 
 namespace spayserver.Data.Repositories.UserRepo
 {
@@ -62,6 +63,26 @@ namespace spayserver.Data.Repositories.UserRepo
                 LastName = user.LastName,
                 Email = user.Email,
                 Username = user.Username
+            };
+        }
+
+        public async Task<UpdateUserDTO> DeleteUserAsync(int Id)
+        {
+            var user=await _context.Users.FirstOrDefaultAsync(a =>a.UserId == Id);
+
+            if (user == null)
+                return null;
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return new UpdateUserDTO
+            {
+                FirstName = user.FirstName,
+                Username = user.Username,
+                LastName = user.LastName,
+                Email = user.Email
+
             };
         }
     }

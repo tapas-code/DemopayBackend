@@ -66,5 +66,15 @@ namespace spayserver.Controllers
         }
 
         // Delete user
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUserAsync(int id)
+        {
+            var deletedUser = await _userServices.DeleteUserAsync(id);
+
+            if(deletedUser == null) return NotFound();
+
+
+            return Ok(deletedUser);
+        }
     }
 }

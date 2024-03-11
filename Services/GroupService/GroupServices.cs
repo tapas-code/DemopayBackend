@@ -49,5 +49,10 @@ namespace spayserver.Services.GroupService
         {
             return await _groupRepository.CreateGroupAsync(groupDTO);
         }
+
+        public async Task<GroupDTO> DeleteGroupAsync(int id)
+        {
+            return await _groupRepository.DeleteGroupAsync(id);
+        }
     }
 }

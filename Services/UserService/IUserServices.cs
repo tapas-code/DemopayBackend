@@ -9,5 +9,7 @@ namespace spayserver.Services.UserService
         Task<UserDTO> GetUserByIdAsync(int id);
         Task<IEnumerable<UserDTO>> GetUserByNameAsync(string searchTerm);
         Task<UpdateUserDTO> UpdateUserByIdAsync(int Id, JsonPatchDocument<UserDTO> userDto);
+        Task<UpdateUserDTO> DeleteUserAsync(int id);
+
     }
 }

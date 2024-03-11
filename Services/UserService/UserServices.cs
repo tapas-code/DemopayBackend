@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Mvc;
 using spayserver.Data.DTOs;
 using spayserver.Data.Models;
 using spayserver.Data.Repositories.UserRepo;
@@ -54,6 +55,16 @@ namespace spayserver.Services.UserService
                 return null;
 
             return user;
+        }
+
+        public async Task<UpdateUserDTO> DeleteUserAsync(int id)
+        {
+            var deletedUser =await _userRepository.DeleteUserAsync(id);
+
+            if (deletedUser == null) return null;
+
+
+            return deletedUser;
         }
     }
 }

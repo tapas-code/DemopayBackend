@@ -57,6 +57,15 @@ namespace spayserver.Controllers
                 return BadRequest("Invalid Consumer details.");
             }
         }
+
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteGroupAsync (int id)
+        {
+            var group = _groupServices.DeleteGroupAsync(id);
+            if (group == null)
+                return null;
+            return Ok(group);
+        }
     }
 
 }
