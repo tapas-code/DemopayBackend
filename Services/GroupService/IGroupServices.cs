@@ -10,5 +10,7 @@ namespace spayserver.Services.GroupService
         Task<IEnumerable<GroupDTO>> GetGroupByNameAsync(string groupName);
 
         Task<GroupDTO> CreateGroupAsync (AddGroupDTO groupDTO);
+
+
     }
 }

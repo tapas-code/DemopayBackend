@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.EntityFrameworkCore;
 using spayserver.Data.Contexts;
+using spayserver.Data.DTOs;
 using spayserver.Data.Models;
 
 namespace spayserver.Data.Repositories.UserRepo
@@ -29,6 +31,38 @@ namespace spayserver.Data.Repositories.UserRepo
                                                 u.Username.Contains(searchTerm)||
                                                 u.FirstName.Contains(searchTerm)||
                                                 u.LastName.Contains(searchTerm)).ToListAsync();
+        }
+
+        public async Task<UpdateUserDTO> UpdateUserByIdAsync(int Id, JsonPatchDocument<UserDTO> userDto)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(a => a.UserId == Id);
+            if (user == null) { return null; }
+
+            var newUserDTO = new UserDTO
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Username = user.Username,
+                UserId = user.UserId
+            };
+
+            userDto.ApplyTo(newUserDTO);
+
+            user.FirstName = newUserDTO.FirstName;
+            user.LastName = newUserDTO.LastName;
+            user.Email = newUserDTO.Email;
+            user.Username = newUserDTO.Username;
+
+            
+            await _context.SaveChangesAsync();
+            return new UpdateUserDTO
+            { 
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Username = user.Username
+            };
         }
     }
 }

@@ -272,3 +272,7 @@ C:\Users\KishlayKumar\Source\Repos\DemopayBackend\obj\Debug\net8.0\refint\spayse
 C:\Users\KishlayKumar\Source\Repos\DemopayBackend\obj\Debug\net8.0\spayserver.pdb
 C:\Users\KishlayKumar\Source\Repos\DemopayBackend\obj\Debug\net8.0\spayserver.genruntimeconfig.cache
 C:\Users\KishlayKumar\Source\Repos\DemopayBackend\obj\Debug\net8.0\ref\spayserver.dll
+C:\Users\KishlayKumar\source\repos\DemopayBackend\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\KishlayKumar\source\repos\DemopayBackend\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\KishlayKumar\source\repos\DemopayBackend\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\KishlayKumar\source\repos\DemopayBackend\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
