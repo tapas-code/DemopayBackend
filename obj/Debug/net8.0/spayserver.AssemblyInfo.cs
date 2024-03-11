@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("spayserver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5dd9980aea34e52aec0ff1f3a89e9e208fbdf04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13a1177709b19a2b73e06325063f53e331b1a73c")]
 [assembly: System.Reflection.AssemblyProductAttribute("spayserver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("spayserver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
