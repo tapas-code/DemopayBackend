@@ -20,6 +20,7 @@ public partial class SpaydbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Data Source=desktop-ab199u8;Initial Catalog=spaydb;User ID=Tapash;Password=Db123;Encrypt=True;Trust Server Certificate=True");
 
@@ -75,7 +76,14 @@ public partial class SpaydbContext : DbContext
             entity.Property(e => e.Username)
                 .HasMaxLength(100)
                 .IsUnicode(false);
+            entity.Property(e => e.Phone)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+            entity.Property(e => e.imgUrl)
+                .HasMaxLength(300)
+                .IsUnicode(false);
         });
+
 
         OnModelCreatingPartial(modelBuilder);
     }

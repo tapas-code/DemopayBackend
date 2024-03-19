@@ -42,7 +42,9 @@ namespace spayserver.Services.UserService
                 LastName = user.LastName,
                 Email = user.Email,
                 Username = user.Username,
-                Amount = (decimal)user.Amount
+                Amount = (decimal)user.Amount,
+                Phone = user.Phone,
+                imgUrl = user.imgUrl
             };
         }
     }

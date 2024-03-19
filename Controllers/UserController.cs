@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Azure;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using spayserver.Data.DTOs;
@@ -42,7 +43,10 @@ namespace spayserver.Controllers
             return Ok(users);
         }
 
+        
+
         // Update user by id 
+
 
         // Delete user
     }

@@ -30,5 +30,6 @@ namespace spayserver.Data.Repositories.UserRepo
                                                 u.FirstName.Contains(searchTerm)||
                                                 u.LastName.Contains(searchTerm)).ToListAsync();
         }
+
     }
 }
