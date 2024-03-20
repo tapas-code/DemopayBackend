@@ -1,4 +1,5 @@
-﻿using spayserver.Data.DTOs;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using spayserver.Data.DTOs;
 using spayserver.Data.Models;
 using spayserver.Data.Repositories.UserRepo;
 
@@ -46,6 +47,15 @@ namespace spayserver.Services.UserService
                 Phone = user.Phone,
                 imgUrl = user.imgUrl
             };
+        }
+
+        public async Task<UpdateUserDTO> UpdateUserByIdAsync(int Id, JsonPatchDocument<UserDTO> userDto)
+        {
+            var user = await _userRepository.UpdateUserByIdAsync(Id,userDto);
+            if (user == null)
+                return null;
+
+            return user;
         }
     }
 }

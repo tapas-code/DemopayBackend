@@ -19,11 +19,19 @@ public partial class SpaydbContext : DbContext
     public virtual DbSet<Group> Groups { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
+<<<<<<< HEAD
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Data Source=desktop-ab199u8;Initial Catalog=spaydb;User ID=Tapash;Password=Db123;Encrypt=True;Trust Server Certificate=True");
 
+||||||| 07773a0
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer("Data Source=desktop-ab199u8;Initial Catalog=spaydb;User ID=Tapash;Password=Db123;Encrypt=True;Trust Server Certificate=True");
+
+=======
+>>>>>>> e5dd9980aea34e52aec0ff1f3a89e9e208fbdf04
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Group>(entity =>

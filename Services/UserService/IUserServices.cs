@@ -1,4 +1,5 @@
-﻿using spayserver.Data.DTOs;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using spayserver.Data.DTOs;
 
 namespace spayserver.Services.UserService
 {
@@ -7,5 +8,6 @@ namespace spayserver.Services.UserService
         Task<IEnumerable<UserDTO>> GetUsersAsync();
         Task<UserDTO> GetUserByIdAsync(int id);
         Task<IEnumerable<UserDTO>> GetUserByNameAsync(string searchTerm);
+        Task<UpdateUserDTO> UpdateUserByIdAsync(int Id, JsonPatchDocument<UserDTO> userDto);
     }
 }

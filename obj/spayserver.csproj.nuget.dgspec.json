@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\spayserver.csproj": {}
+    "C:\\Users\\KishlayKumar\\source\\repos\\DemopayBackend\\spayserver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\spayserver.csproj": {
+    "C:\\Users\\KishlayKumar\\source\\repos\\DemopayBackend\\spayserver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\spayserver.csproj",
+        "projectUniqueName": "C:\\Users\\KishlayKumar\\source\\repos\\DemopayBackend\\spayserver.csproj",
         "projectName": "spayserver",
-        "projectPath": "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\spayserver.csproj",
-        "packagesPath": "C:\\Users\\TapasKumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TapasKumar\\mySaves\\PROJECTS\\SPay\\server\\spayserver\\obj\\",
+        "projectPath": "C:\\Users\\KishlayKumar\\source\\repos\\DemopayBackend\\spayserver.csproj",
+        "packagesPath": "C:\\Users\\KishlayKumar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KishlayKumar\\source\\repos\\DemopayBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TapasKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\KishlayKumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< HEAD
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -48,6 +49,17 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+||||||| 07773a0
+=======
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+>>>>>>> e5dd9980aea34e52aec0ff1f3a89e9e208fbdf04
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -86,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 ﻿using Azure;
 using Microsoft.AspNetCore.Http;
+||||||| 07773a0
+﻿using Microsoft.AspNetCore.Http;
+=======
+﻿using Azure;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
+>>>>>>> e5dd9980aea34e52aec0ff1f3a89e9e208fbdf04
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using spayserver.Data.DTOs;
@@ -46,6 +54,25 @@ namespace spayserver.Controllers
         
 
         // Update user by id 
+        [HttpPatch]
+        [Route("{Id}/Update")]
+        public async Task<UpdateUserDTO> UpdateUserByIdAsync([FromRoute] int Id,[FromBody] JsonPatchDocument<UserDTO> userDto)
+        {
+            var user = await _userServices.UpdateUserByIdAsync(Id, userDto);
+
+            if (user == null)
+                return null;
+
+            return new UpdateUserDTO
+            {
+                Amount = user.Amount,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Username = user.Username
+            };
+
+        }
 
 
         // Delete user
